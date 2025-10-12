@@ -88,7 +88,7 @@ function code_fetch(state, startLine, endLine, silent) {
  * ```
  * @param {vitepress.MarkdownRenderer} md
  */
-export default function (md) {
+export default function codefetch_plugin(md) {
   md.block.ruler.before("fence", "codefetch", code_fetch);
   md.renderer.rules.fetched_code_block = (tokens, idx, options, env, slf) => {
     // Use markdown-it's default fence renderer for proper highlighting and line numbers

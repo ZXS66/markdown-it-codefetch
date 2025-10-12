@@ -1,0 +1,7 @@
+# .npmignore
+node_modules/
+tests/
+env
+*.log
+.editorconfig
+LICENSE
