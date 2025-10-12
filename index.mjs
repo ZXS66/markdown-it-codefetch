@@ -1,4 +1,4 @@
-// import type { MarkdownRenderer } from "vitepress";
+import { MarkdownRenderer } from "vitepress";
 import syncFetch from "sync-fetch";
 
 /**
@@ -86,7 +86,7 @@ function code_fetch(state, startLine, endLine, silent) {
  * ```ts
  * // [!fetch("https://github.com/markdown-it/markdown-it-sup/raw/refs/heads/master/index.mjs")]
  * ```
- * @param {vitepress.MarkdownRenderer} md
+ * @param {MarkdownRenderer} md
  */
 export default function codefetch_plugin(md) {
   md.block.ruler.before("fence", "codefetch", code_fetch);

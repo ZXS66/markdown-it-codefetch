@@ -1,7 +1,10 @@
 # .npmignore
 node_modules/
 tests/
+types/
 env
 *.log
 .editorconfig
 LICENSE
+*.map
+tsconfig.json

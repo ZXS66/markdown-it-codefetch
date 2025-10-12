@@ -4,7 +4,7 @@ This is a markdown-it plugin that fetches code snippets from remote URLs and emb
 
 Inspired by [markdown-it-footnote](https://github.com/markdown-it/markdown-it-footnote).
 
-[![CI](https://github.com/ZXS66/markdown-it-codefetch/actions/workflows/ci.yml/badge.svg)](https://github.com/ZXS66/markdown-it-codefetch/actions/workflows/ci.yml)
+<!--[![CI](https://github.com/ZXS66/markdown-it-codefetch/actions/workflows/ci.yml/badge.svg)](https://github.com/ZXS66/markdown-it-codefetch/actions/workflows/ci.yml)-->
 [![NPM version](https://img.shields.io/npm/v/markdown-it-codefetch.svg?style=flat)](https://www.npmjs.org/package/markdown-it-codefetch)
 [![Coverage Status](https://img.shields.io/coveralls/ZXS66/markdown-it-codefetch/master.svg?style=flat)](https://coveralls.io/r/ZXS66/markdown-it-codefetch?branch=master)
 
