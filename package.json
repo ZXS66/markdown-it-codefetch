@@ -1,4 +1,53 @@
 {
   "name": "markdown-it-codefetch",
-  "packageManager": "yarn@4.6.0"
+  "description": "a markdown-it plugin to fetch code from remote url",
+  "version": "1.0.0",
+  "keywords": [
+    "markdown-it-plugin",
+    "markdown-it",
+    "markdown",
+    "codefetch"
+  ],
+  "author": "John Zhu <zh_cn2008@hotmail.com> (https://johnzhu.online)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZXS66/markdown-it-codefetch.git"
+  },
+  "module": "index.mjs",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "c8": "^8.0.1",
+    "eslint": "^8.55.0",
+    "eslint-config-standard": "^17.1.0",
+    "markdown-it": "^13.0.2",
+    "markdown-it-testgen": "^0.1.6",
+    "mocha": "^10.2.0",
+    "rollup": "^4.6.1",
+    "sync-fetch": "^0.6.0-2",
+    "vitepress": "^1.6.4"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs.js",
+      "import": "./index.mjs"
+    },
+    "./*": {
+      "require": "./*",
+      "import": "./*"
+    }
+  },
+  "files": [
+    "index.mjs",
+    "lib/",
+    "dist/"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "build": "rollup -c",
+    "test": "npm run lint && npm run build && c8 --exclude dist --exclude test -r text -r html -r lcov mocha",
+    "prepublishOnly": "npm run lint && npm run build"
+  }
 }
