@@ -1,7 +1,7 @@
 {
   "name": "markdown-it-codefetch",
   "description": "a markdown-it plugin to fetch code from remote url",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "keywords": [
     "markdown-it-plugin",
     "markdown-it",
@@ -21,16 +21,18 @@
   "types": "./index.d.mts",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.9.3",
-    "vitepress": "^1.6.4"
+    "@types/markdown-it": "^14.1.2",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
+    "markdown-it": "^14.1.0",
     "sync-fetch": "^0.6.0-2"
   },
   "scripts": {
     "test": "echo 'No tests yet'",
     "prepublish": "tsc",
-    "publish": "npm publish --access public"
+    "publish": "npm publish --access public",
+    "postpublish": "rm ./index.d.mts ./index.d.mts.map"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
